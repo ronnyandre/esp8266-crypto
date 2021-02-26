@@ -14,30 +14,11 @@
 #include <ESP8266HTTPClient.h>
 #include <WiFiClientSecureBearSSL.h>
 
-/**** Setup ****/
-
-// Uncomment the next line if you are using an ESP-01
-// #define ESP01
-
-// WIFI Network name and password
-#define WIFI_SSID "YOUR_NETWORK"
-#define WIFI_PASS "YOUR_PASSWORD"
-
-// Setup time in seconds
-#define SETUP_TIME 4
-
-// Update screen every __ seconds
-#define UPDATE_TIME 10
-
-// Currency tested: eur usd gbp
-#define CURRENCY_CODE "eur"
-// Currency symbol tested: letters and $
-#define CURRENCY_SYM 'E'
+// Do all your configuration in the following file
+#include "userconfig.h"
 
 // Fingerprint for api.cryptonator.com - expires 6 Feb 2022
 const uint8_t fingerprint[20] = {0x10, 0x76, 0x19, 0x6B, 0xE9, 0xE5, 0x87, 0x5A, 0x26, 0x12, 0x15, 0xDE, 0x9F, 0x7D, 0x3B, 0x92, 0x9A, 0x7F, 0x30, 0x13};
-
-/** End Setup **/
 
 ESP8266WiFiMulti WiFiMulti;
 
@@ -45,11 +26,6 @@ ESP8266WiFiMulti WiFiMulti;
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-// Screen Definitions
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
-#define OLED_RESET -1
-#define SCREEN_ADDRESS 0x3C
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // All crypto logos must be 48x48
