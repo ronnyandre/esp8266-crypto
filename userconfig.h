@@ -15,12 +15,12 @@
 // Update screen every __ seconds
 #define UPDATE_TIME 10
 
-// Currency tested: eur usd gbp
+// Currency settings (see available currencies here: https://www.cryptonator.com/api/currencies)
 #define CURRENCY_CODE "eur"
-// Currency symbol tested: letters and $
+// Currency symbol
 #define CURRENCY_SYM 'E'
 
-// Screen Definitions
+// OLED Screen Definitions - Only needs to be changed if this doesn't work
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 #define OLED_RESET -1
